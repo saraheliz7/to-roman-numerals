@@ -1,8 +1,20 @@
 const convert = (number) => {
     let romanNumeral = ""
 
-    const xAmount = Math.floor(number / 10);
-    const xRemainder = number % 10;
+    const cAmount = Math.floor(number / 100);
+    const cRemainder = number % 100;
+
+    const xcAmount = Math.floor(cRemainder / 90);
+    const xcRemainder = cRemainder % 90;
+
+    const lAmount = Math.floor(xcRemainder / 50);
+    const lRemainder = xcRemainder % 50;
+
+    const xlAmount = Math.floor(lRemainder / 40);
+    const xlRemainder = lRemainder % 40;
+
+    const xAmount = Math.floor(xlRemainder / 10);
+    const xRemainder = xlRemainder % 10;
 
     const ixAmount = Math.floor(xRemainder / 9);
     const ixRemainder = xRemainder % 9;
@@ -14,6 +26,18 @@ const convert = (number) => {
     const ivRemainder = vRemainder % 4;
 
 
+    for(let c = cAmount; c > 0; c--) {
+        romanNumeral += "C";
+    }
+    for(let xc = xcAmount; xc > 0; xc--) {
+        romanNumeral += "XC";
+    }
+    for(let l = lAmount; l > 0; l--) {
+        romanNumeral += "L";
+    }
+    for(let xl = xlAmount; xl > 0; xl--) {
+        romanNumeral += "XL";
+    }
     for(let x = xAmount; x > 0; x--) {
         romanNumeral += "X";
     }

@@ -31,6 +31,22 @@ describe("Roman Numeral Converter", function () {
         expect(convert(19)).to.equal("XIX");
     });
 
+    it("should change 40 to XL", function() {
+        expect(convert(40)).to.equal("XL");
+    });
+
+    it("should change 50 to L", function() {
+        expect(convert(50)).to.equal("L");
+    });
+
+    it("should change 90 to XC", function() {
+        expect(convert(90)).to.equal("XC");
+    });
+
+    it("should change 100 to C", function() {
+        expect(convert(100)).to.equal("C");
+    });
+
 
 
 
