@@ -15,5 +15,9 @@ describe("Roman Numeral Converter", function () {
         expect(convert(3)).to.equal("III");
     });
 
+    it("should change 12", function() {
+        expect(convert(12)).to.equal("XII");
+    });
+
 
 });
