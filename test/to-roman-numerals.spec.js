@@ -55,5 +55,9 @@ describe("Roman Numeral Converter", function () {
         expect(convert(1000)).to.equal("M");
     });
 
+    it("should change 5243 to MMMMMCCXLIII", function() {
+        expect(convert(5243)).to.equal("MMMMMCCXLIII");
+    });
+
 
 });
