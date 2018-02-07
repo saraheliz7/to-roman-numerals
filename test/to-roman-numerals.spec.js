@@ -47,7 +47,13 @@ describe("Roman Numeral Converter", function () {
         expect(convert(100)).to.equal("C");
     });
 
+    it("should change 500 to D", function() {
+        expect(convert(500)).to.equal("D");
+    });
 
+    it("should change 1000 to M", function() {
+        expect(convert(1000)).to.equal("M");
+    });
 
 
 });
